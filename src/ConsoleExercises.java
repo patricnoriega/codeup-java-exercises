@@ -45,13 +45,13 @@ import java.util.Scanner;
 
 
             System.out.println("Enter the length of the room to find the Area: ");
-            double length = scanner.nextDouble();
+            double areaLength = scanner.nextDouble();
 
             System.out.println("Enter the width of the room to find the Area: ");
-            double width = scanner.nextDouble();
+            double areaWidth = scanner.nextDouble();
 
             //Area = length*width;
-            double area = length*width;
+            double area = areaLength*areaWidth;
             System.out.println("Area of the room is:" + area);
 
 
