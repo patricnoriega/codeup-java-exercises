@@ -11,6 +11,7 @@ public class ControlFlowExercises {
 //        Each loop iteration, output the current value of i, then increment i by one.
 //        Your output should look like this:
 //        5 6 7 8 9 10 11 12 13 14 15
+//
 //        int i = 5;
 //        while (i <= 15) {
 //            System.out.print(i);
@@ -18,7 +19,10 @@ public class ControlFlowExercises {
 //        }
 //        System.out.println();
 //        Do While
-//        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
+//  --------------------------------------------------------------------
+
+//       Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
+//
 //        int x = 0;
 //        do {
 //
@@ -36,6 +40,8 @@ public class ControlFlowExercises {
 //        for (int x = 100; x >= -10; x -= 5) {
 //            System.out.println(x);
 //        }
+//  --------------------------------------------------------------------
+
 //        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
 //        long x = 2;
 //        do {
@@ -47,6 +53,7 @@ public class ControlFlowExercises {
 //        for (long x = 2; x <= 1000000; x *= x) {
 //            System.out.println(x);
 //        }
+//  --------------------------------------------------------------------
 
 //        Fizzbuzz:
 //        One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
@@ -65,6 +72,8 @@ public class ControlFlowExercises {
 //                System.out.println(i);
 //            }
 //        }
+//  --------------------------------------------------------------------
+
 //        Display a table of powers.
 //                Prompt the user to enter an integer.
 //        Display a table of squares and cubes from 1 to the value entered.
@@ -81,19 +90,19 @@ public class ControlFlowExercises {
 //        3      | 9       | 27
 //        4      | 16      | 64
 //        5      | 25      | 125
-        ;
 
-        System.out.print("What number would you like to go up to? ");
-        int userInt = scanner.nextInt();
-        System.out.println("");
-        System.out.println("Here is your table!");
-        System.out.println("");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-
-        for (int i = 1; i <= userInt; i++){
-            System.out.println(i + "      | " + (i * i) + "       |" + "  " +(i * i * i));
-        }
+//        System.out.print("What number would you like to go up to? ");
+//        int userInt = scanner.nextInt();
+//        System.out.println("");
+//        System.out.println("Here is your table!");
+//        System.out.println("");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//
+//        for (int i = 1; i <= userInt; i++) {
+//            System.out.println(i + "      | " + (i * i) + "       |" + "  " + (i * i * i));
+//        }
+//  --------------------------------------------------------------------
 //        Convert given number grades into letter grades.
 //        -Prompt the user for a numerical grade from 0 to 100.
 //        -Display the corresponding letter grade.
@@ -101,8 +110,27 @@ public class ControlFlowExercises {
 //        Assume that the user will enter valid integers for the grades.
 //        The application should only continue if the user agrees to.
 //        Grade Ranges:
-
+        String choice = "y";
+        while (choice.equalsIgnoreCase("y")) {
+            System.out.print("What is your numerical grade:\t");
+            double score = scanner.nextDouble();
+            char userGrade = 'F';
+            if (score >= 88)
+                userGrade = 'A';
+            else if (score >= 80)
+                userGrade = 'B';
+            else if (score >= 67)
+                userGrade = 'C';
+            else if (score >= 60)
+                userGrade = 'D';
+            String message = "Equivalent Letter Grade:\t" + userGrade;
+            System.out.println(message);
+            System.out.print("\nContinue? (y/n): ");
+            choice = scanner.next();
+            System.out.println();
+        }
 
     }
-    }
+}
+
 
