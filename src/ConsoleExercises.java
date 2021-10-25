@@ -21,7 +21,7 @@ import java.util.Scanner;
         String secondWord = scanner.next();
         String thirdWord = scanner.next();
 
-        System.out.println("\"" + firstWord + "\n" +  secondWord + "\n" + thirdWord + "\" ");
+        System.out.println(firstWord + "\n" +  secondWord + "\n" + thirdWord);
 
 //        Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
 //
