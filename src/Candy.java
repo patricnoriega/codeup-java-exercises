@@ -28,7 +28,7 @@ public class Candy {
 
 
     public static void main(String[] args) {
-        Candy randomCandy = new Candy("What is this candy???");
+        Candy randomCandy = new Candy("candy I can't pronounce");
         System.out.println("randomCandy.name = " + randomCandy.name);
         System.out.println("randomCandy.size = " + randomCandy.size);
         randomCandy.talkaboutCandy();
