@@ -23,10 +23,10 @@ public class Bob {
         if (sentence.equals("")) {
             System.out.println("Fine. Be that way!");
         }
-        if (sentence.endsWith("?")) {
+        else if (sentence.endsWith("?")) {
             System.out.println("Sure.");
         }
-        if (sentence.endsWith("!")) {
+        else if (sentence.endsWith("!")) {
             System.out.println("Whoa, chill out!");
         }
         else {

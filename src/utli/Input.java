@@ -10,19 +10,27 @@ public class Input {
     }
 
 
-    String getString() {
+    public String getString() {
         return scanner.next();
     }
 
-    boolean yesNo() {
-        return scanner.nextBoolean() ;
+    public boolean yesNo() {
+        String userInput = scanner.next();
+        return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
 
-    int getInt(int min, int max) {
-        return scanner.nextInt();
+    public int getInt(int min, int max) {
+        System.out.printf("please enter a number between %n and %n", min, max);
+        int userInput = scanner.nextInt();
+
+        while (min > max || max < min){
+            getInt();
+        }
+
+        return userInput;
     }
 
-    int getInt() {
+    public int getInt() {
         return scanner.nextInt();
     }
 
@@ -37,14 +45,25 @@ public class Input {
     public static void main(String[] args) {
         System.out.print("Enter some characters\t ");
         Input input = new Input();
-        String something = input.getString();
-        System.out.printf("You typed in %s", something );
+        String someCharacters = input.getString();
+        System.out.printf("You typed in %s", someCharacters);
 
-        System.out.print("Do you wish to continue? \t");
+        System.out.print(" Do you wish to continue? \t");
         Input input1 = new Input();
-        boolean yesNoAnswer = Scanner.nextLine().toLowerCase().startsWith("y");
         Boolean continuing = input1.yesNo();
-        System.out.printf("%s You typed in %s", continuing , yesNoAnswer );
+        System.out.printf("You typed in %s", continuing );
+
+        System.out.print("Enter some number between 1-10 \t ");
+        Input input2 = new Input();
+        int someNum = input2.getInt(1,10);
+        System.out.printf("User entered:/t %s",someNum);
+
+        System.out.print("Enter some number between min-max \t ");
+        Input input3 = new Input();
+        Double anothaNum = input3.getDouble();
+        System.out.printf("User entered:/t %s", anothaNum);
+
+
 
 
 
