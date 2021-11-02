@@ -1,4 +1,4 @@
-package utli;
+package util;
 
 import java.util.Scanner;
 
@@ -38,7 +38,7 @@ public class Input {
         return scanner.nextDouble() ;
     }
 
-    double getDouble() {
+    public double getDouble() {
         return scanner.nextDouble() ;
     }
 
