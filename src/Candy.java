@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //Java WarmUp
 //        Write a public class named ‘Candy’ - this class should have two public fields, both taking in a string literal as a value.
 //        The first would be ‘name’ and the second will be ‘size’.
@@ -10,6 +12,9 @@ public class Candy {
     public String name;
 
     public String size;
+
+    public String[] descriptors;
+
 
     public void talkaboutCandy(){
         System.out.printf("Ahh, a %s! I see you also got the %s size of it. Looks good! :) %n", this.name, this.size);
@@ -25,19 +30,28 @@ public class Candy {
         this.name = name;
         this.size = size;
     }
+    public Candy(String name, String size, String[] descriptors){
+        this.name = name;
+        this.size = size;
+        this.descriptors = descriptors;
+    }
 
 
     public static void main(String[] args) {
+
         Candy randomCandy = new Candy("candy I can't pronounce");
         System.out.println("randomCandy.name = " + randomCandy.name);
         System.out.println("randomCandy.size = " + randomCandy.size);
         randomCandy.talkaboutCandy();
 
         Candy skittles = new Candy("skittles", "little-bag");
-
         System.out.println("skittles.name = " + skittles.name);
         System.out.println("skittles.size = " + skittles.size);
         skittles.talkaboutCandy();
 
+        Candy candyDescriptions = new Candy("Sweet Tarts", "Super Small", new String[]{"Choking hazard"});
+        System.out.printf("I have a piece of %s that is %s and could be described as a %s. " , candyDescriptions.name, candyDescriptions.size, Arrays.toString(candyDescriptions.descriptors));
+        }
+
+
     }
-}
