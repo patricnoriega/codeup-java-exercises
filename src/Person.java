@@ -4,7 +4,8 @@ public class Person {
 //    public String lastname;
 //    public int age;
       private String name;
-
+      protected int age;
+  ;
       //instance method -----LECTURE-------
 //    public String joinChat(){
 //        return lastname + ", " + firstName + " has joined the chat";
@@ -12,9 +13,18 @@ public class Person {
 //    //static property representing world population
 //    public static long worldPop = 7_900_000_000L;
 
-      public String getName(String name){
+//    public Person(String name){};
+    public Person(String name){
+        this.name = name;
+    }
+    public Person(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+      public String getName(){
 //TODO: return the person's name
-          return name;
+          return this.name;
       }
 
     public void setName(String name){
