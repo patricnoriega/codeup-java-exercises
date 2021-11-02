@@ -12,11 +12,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class ServerNameGenerator {
-    public static String randomString(String[]adj){
+    public static String randomString(String[]arr){
 
         Random randomAdj = new Random();
-        int index = randomAdj.nextInt(adj.length);
-        return (adj[index]);
+        int index = randomAdj.nextInt(arr.length);
+        return (arr[index]);
 
 }
     public static void main(String[] args) {
