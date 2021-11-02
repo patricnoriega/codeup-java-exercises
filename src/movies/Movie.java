@@ -1,6 +1,6 @@
 package movies;
 
-public class movie {
+public class Movie {
 
     private String name;
     private String category;
@@ -8,13 +8,20 @@ public class movie {
     public String getMovie (String name){
         return name;
     }
+    public String setMovie (String name){
+        return this.name;
+    }
 
     public String getCategory (String category){
-    return category;
+        return category;
+
+    }
+    public String setCategory (String category){
+        return this.category;
 
     }
 
-    public String movie(String name, String category) {
+    public Movie(String name, String category) {
 
     }
 }
