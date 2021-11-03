@@ -14,7 +14,6 @@ public class MethodsExercises {
         dice();
     }
 
-
     public static int addition(int num1, int num2) {
         return num1 + num2;
     }
@@ -37,7 +36,6 @@ public class MethodsExercises {
         return min;
     }
 
-
 //    Create a method that validates that user input is in a certain range
 //    The method signature should look like this:
 //    public static int getInteger(int min, int max);
@@ -57,9 +55,10 @@ public class MethodsExercises {
         System.out.println("ERROR: Expected a number between " + min + " and " + max);
         return validate(min, max);
     }
+
 //    Calculate the factorial of a number.
 
-    //    Prompt the user to enter an integer from 1 to 10.
+//    Prompt the user to enter an integer from 1 to 10.
 //    Display the factorial of the number entered by the user.
 //    Ask if the user wants to continue.
 //    Use a for loop to calculate the factorial.
@@ -88,12 +87,13 @@ public class MethodsExercises {
                 }
                 factorial *= i;
                 System.out.printf("%2d! = %-45s = %d%n", i, center, factorial);
-            }
-            System.out.println("Do you want to continue? (y/n)");
-            toContinue = scanner.nextLine();
+                }
+                System.out.println("Do you want to continue? (y/n)");
+                toContinue = scanner.nextLine();
 
         } while (toContinue.equalsIgnoreCase("y"));
     }
+
 //    Create an application that simulates dice rolling.
 //
 //    Ask the user to enter the number of sides for a pair of dice.
@@ -112,7 +112,6 @@ public class MethodsExercises {
         if (userChoice.equalsIgnoreCase("y")) {
 
             do {
-
                 int dice = (int) Math.floor(Math.random() * sides);
                 int dice2 = (int) Math.floor(Math.random() * sides);
                 System.out.println(dice);
