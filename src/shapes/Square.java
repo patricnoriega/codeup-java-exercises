@@ -3,24 +3,27 @@ package shapes;
 import shapes.Rectangle;
 
 public class Square extends Quadrilateral {
-    public Square(int length, int width) {
-        super(length, width);
+
+    public Square(double side) {
+        super(side, side);
     }
 
-    int setLength() {
-        return length;
+    public void setLength(double side) {
+        this.length = side;
     }
 
-    int setWidth() {
-        return width;
+    public void setWidth(double side) {
+         this.width = side;
     }
 
     public double getPerimeter() {
-        return 2 * length + 2 * width;
+        double side = this.length;
+        return side * 4;
     }
 
     public double getArea() {
-        return length * width;
+        double side = this.width;
+        return side * side;
     }
 //protected int side;
 //
