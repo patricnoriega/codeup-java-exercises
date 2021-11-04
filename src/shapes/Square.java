@@ -34,8 +34,6 @@ public class Square extends Quadrilateral {
 //
 //    public int getPerimeter() {
 //        return 4 * side;
-    }
-
-
-
 //    }
+
+    }
