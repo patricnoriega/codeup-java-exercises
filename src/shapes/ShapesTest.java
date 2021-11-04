@@ -24,11 +24,5 @@ public class ShapesTest {
         Measurable myShape2 = new Square(3,3);
         System.out.println("Square box2 perimeter = " + myShape2.getPerimeter() );
         System.out.println("Square box2 perimeter = " + myShape2.getArea() );
-
-
-
-
-
-
     }
 }

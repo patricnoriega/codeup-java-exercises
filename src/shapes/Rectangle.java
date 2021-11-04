@@ -21,6 +21,8 @@ public class Rectangle extends Quadrilateral implements Measurable{
     int setWidth() {
         return width;
     }
+
+
 //    protected int length;
 //    protected int width;
 
