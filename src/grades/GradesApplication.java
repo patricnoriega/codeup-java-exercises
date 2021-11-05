@@ -54,7 +54,8 @@ public class GradesApplication {
         for (String student : students.keySet()) {
             if (student.equals(userInput)) {
                 Student retrievedStudent = students.get(userInput);
-                System.out.println(retrievedStudent.getName());
+                System.out.println("Name: " + retrievedStudent.getName());
+                System.out.println("Current Average: "+ retrievedStudent.getGradeAverage());
             }
         }
     }
