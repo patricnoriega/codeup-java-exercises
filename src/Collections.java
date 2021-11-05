@@ -62,7 +62,7 @@ public class Collections {
         usernames.put("Shanshan ", "daGoat");
         usernames.put("Cody ", "codyDaDuck");
 
-        System.out.println("usernames.get(Shanshan) = " + usernames.get("Shanshan"));
+        System.out.println("usernames.get(Shanshan) = " + usernames.get("Shanshan "));
         System.out.println("usernames.get(Alex) = " + usernames.get("Alex"));
         System.out.println("usernames.getOrDefault(Alex) = "+ usernames.getOrDefault("Alex", "noUserFound"));
 
