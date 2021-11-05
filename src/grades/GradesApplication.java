@@ -5,9 +5,6 @@ import util.Input;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static movies.Movie.getAllMovies;
-import static movies.Movie.getMoviesByCategory;
-
 public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
