@@ -57,37 +57,3 @@ public class Exceptions {
         }
     }
 }
-
-//    public double getDouble() throws NumberFormatException {
-//        try {
-//            return Double.valueOf(getString());
-//        } catch (NumberFormatException e) {
-//            System.out.println("Number Format Exception: User did not enter a required decimal number.");
-//            e.printStackTrace();
-//            return getDouble();
-//        }
-//    }
-//
-//    public double getDouble(String prompt) {
-//        System.out.println(prompt);
-//        return getDouble();
-//    }
-//
-//    public int getInt() throws NumberFormatException {
-//        try {
-//            return Integer.valueOf(getString());
-//        } catch (NumberFormatException e) {
-//            System.out.println("Number Format Exception: User did not enter an integer.");
-//            return getInt("Solve by: entering a WHOLE NUMBER.");
-//        }
-//    }
-//
-//    public int getInt(String prompt) {
-//        System.out.println(prompt);
-//        return getInt();
-//    }
-
-//    public String getString(String prompt) {
-//        System.out.println(prompt);
-//        return getString();
-//    }
