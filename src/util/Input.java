@@ -3,72 +3,78 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    private static Scanner scanner;
 
-    public Input(){
-        this.scanner = new Scanner(System.in);
+    public Input() {
+       this.scanner = new Scanner(System.in);
     }
 
 
     public String getString() {
-        return scanner.next();
+        return scanner.nextLine();
+    }
+
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return getString();
     }
 
     public boolean yesNo() {
-        String userInput = scanner.next();
-        return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
+        String input = scanner.nextLine();
+        return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
     }
 
     public int getInt(int min, int max) {
         System.out.printf("please enter a number between %n and %n", min, max);
         int userInput = scanner.nextInt();
 
-        while (min > max || max < min){
+        while (min > max || max < min) {
             getInt();
         }
 
         return userInput;
     }
 
-    public int getInt() {
-        return scanner.nextInt();
+    public int getInt() throws NumberFormatException {
+        try {
+            return Integer.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Number Format Exception: User did not enter an integer.");
+            return getInt("Solve by: entering a WHOLE NUMBER.");
+        }
     }
 
-    double getDouble(double min, double max) {
-        return scanner.nextDouble() ;
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        return getInt();
     }
 
-    public double getDouble() {
-        return scanner.nextDouble() ;
+    public double getDouble(double min, double max) {
+        double decimal = getDouble();
+        while (decimal < min || decimal > max) {
+            System.out.printf("Please enter an decimal between %f and %f.\n", min, max);
+            decimal = getDouble();
+        }
+        return decimal;
     }
 
-    public static void main(String[] args) {
-        System.out.print("Enter some characters\t ");
-        Input input = new Input();
-        String someCharacters = input.getString();
-        System.out.printf("You typed in %s", someCharacters);
+    public double getDouble(double min, double max, String prompt) {
+        System.out.println(prompt);
+        return getDouble(min, max);
+    }
 
-        System.out.print(" Do you wish to continue? \t");
-        Input input1 = new Input();
-        Boolean continuing = input1.yesNo();
-        System.out.printf("You typed in %s", continuing );
+    public double getDouble() throws NumberFormatException {
+        try {
+            return Double.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Number Format Exception: User did not enter a required decimal number.");
+            e.printStackTrace();
+            return getDouble();
+        }
+    }
 
-        System.out.print("Enter some number between 1-10 \t ");
-        Input input2 = new Input();
-        int someNum = input2.getInt(1,10);
-        System.out.printf("User entered:/t %s",someNum);
-
-        System.out.print("Enter some number between min-max \t ");
-        Input input3 = new Input();
-        Double anothaNum = input3.getDouble();
-        System.out.printf("User entered:/t %s", anothaNum);
-
-
-
-
-
-
-
-
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        return getDouble();
     }
 }
