@@ -41,16 +41,17 @@ public class GradesApplication {
         students.put("theRealNoriega", pat);
 
 //        System.out.println(students);
-        Scanner scanner = new Scanner(System.in);
-        String userInput;
-
+        String scanner = new String(String.valueOf(System.in));
+        String userInput = scanner;
+        Input input = new Input();
         System.out.println();
         System.out.println("Welcome!");
         System.out.println();
         System.out.println("Here are the GitHub usernames of our students:\n " + students.keySet());
         System.out.println();
-        System.out.println("What student would you like to see more information on?");
-        userInput = scanner.next();
+        System.out.println("would you like to see more information on another Student?" + input.yesNo());
+
+
         for (String student : students.keySet()) {
             if (student.equals(userInput)) {
                 Student retrievedStudent = students.get(userInput);
