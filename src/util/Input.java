@@ -10,7 +10,7 @@ public class Input {
     }
 
 
-    public String getString() {
+    public static String getString() {
         return scanner.nextLine();
     }
 
@@ -32,7 +32,14 @@ public class Input {
     }
 
     public int getInt() {
-        return scanner.nextInt();
+        try {
+            String s = getString();
+            return Integer.valueOf(s);
+        }catch (NumberFormatException e){
+            System.out.println("Please enter a integer");
+            return getInt();
+        }
+
     }
 
     public double getDouble(double min, double max) {
@@ -50,26 +57,12 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
-    }
-
-
-    public static void main(String[] args) {
         try {
-            Integer.valueOf(getString());
-
-        } catch (NumberFormatException e) {
-            System.out.println("Number Format Exception: User did not enter an integer.");
-            e.printStackTrace();
-            e.getMessage();
-        }
-        try {
-            Double.valueOf(getString());
-
-        } catch (NumberFormatException e) {
-            System.out.println("Number Format Exception: User did not enter a decimal.");
-            e.printStackTrace();
-            e.getMessage();
+            String s = getString();
+            return Double.valueOf(s);
+        }catch (NumberFormatException e){
+            System.out.println("Please enter a decimal");
+            return getDouble();
         }
     }
 }
