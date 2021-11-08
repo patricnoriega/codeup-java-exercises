@@ -6,7 +6,7 @@ public class Input {
     private static Scanner scanner;
 
     public Input() {
-       this.scanner = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
     }
 
 
@@ -14,10 +14,6 @@ public class Input {
         return scanner.nextLine();
     }
 
-    public String getString(String prompt) {
-        System.out.println(prompt);
-        return getString();
-    }
 
     public boolean yesNo() {
         String input = scanner.nextLine();
@@ -35,18 +31,8 @@ public class Input {
         return userInput;
     }
 
-    public int getInt() throws NumberFormatException {
-        try {
-            return Integer.valueOf(getString());
-        } catch (NumberFormatException e) {
-            System.out.println("Number Format Exception: User did not enter an integer.");
-            return getInt("Solve by: entering a WHOLE NUMBER.");
-        }
-    }
-
-    public int getInt(String prompt) {
-        System.out.println(prompt);
-        return getInt();
+    public int getInt() {
+        return scanner.nextInt();
     }
 
     public double getDouble(double min, double max) {
@@ -63,18 +49,27 @@ public class Input {
         return getDouble(min, max);
     }
 
-    public double getDouble() throws NumberFormatException {
-        try {
-            return Double.valueOf(getString());
-        } catch (NumberFormatException e) {
-            System.out.println("Number Format Exception: User did not enter a required decimal number.");
-            e.printStackTrace();
-            return getDouble();
-        }
+    public double getDouble() {
+        return scanner.nextDouble();
     }
 
-    public double getDouble(String prompt) {
-        System.out.println(prompt);
-        return getDouble();
+
+    public static void main(String[] args) {
+        try {
+            Integer.valueOf(getString());
+
+        } catch (NumberFormatException e) {
+            System.out.println("Number Format Exception: User did not enter an integer.");
+            e.printStackTrace();
+            e.getMessage();
+        }
+        try {
+            Double.valueOf(getString());
+
+        } catch (NumberFormatException e) {
+            System.out.println("Number Format Exception: User did not enter a decimal.");
+            e.printStackTrace();
+            e.getMessage();
+        }
     }
 }
