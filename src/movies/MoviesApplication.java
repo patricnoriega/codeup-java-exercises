@@ -41,6 +41,7 @@ public class MoviesApplication {
                 getMoviesByCategory("scifi");
                 break;
 
+
         }
     }
 }

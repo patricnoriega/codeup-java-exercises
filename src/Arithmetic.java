@@ -14,5 +14,7 @@ public class Arithmetic {
         System.out.println("Arithmetic.pi = " + Arithmetic.pi);
 
         System.out.println(("Arithmetic.add(2,2) = " + Arithmetic.add(2,2)));
+
+
     }
 }
