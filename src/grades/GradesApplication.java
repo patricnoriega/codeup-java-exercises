@@ -51,7 +51,6 @@ public class GradesApplication {
         System.out.println();
         System.out.println("would you like to see more information on another Student?" + input.yesNo());
 
-
         for (String student : students.keySet()) {
             if (student.equals(userInput)) {
                 Student retrievedStudent = students.get(userInput);

@@ -35,8 +35,8 @@ public class Input {
         try {
             String s = getString();
             return Integer.valueOf(s);
-        }catch (NumberFormatException e){
-            System.out.println("Please enter a integer");
+        } catch (NumberFormatException e) {
+            System.out.println("Number Format Exception: Please enter a integer");
             return getInt();
         }
 
@@ -60,9 +60,10 @@ public class Input {
         try {
             String s = getString();
             return Double.valueOf(s);
-        }catch (NumberFormatException e){
-            System.out.println("Please enter a decimal");
+        } catch (NumberFormatException e) {
+            System.out.println("Number Format Exception: Please enter a decimal");
             return getDouble();
         }
+
+        }
     }
-}

@@ -1,3 +1,5 @@
+
+
 import java.util.Locale;
 
 public class StringsHandout {
@@ -87,7 +89,6 @@ public class StringsHandout {
         String paddingAustin = "    austin    ";
         System.out.println("paddingAustin = " + paddingAustin + ".");
         System.out.println("paddingAustin.trim() = " + paddingAustin.trim() + ".");
-
 
     }
 }
