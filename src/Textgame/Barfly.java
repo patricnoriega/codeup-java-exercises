@@ -24,6 +24,10 @@ public class Barfly {
         boolean gameRunning = true;
 
         System.out.println("Welcome to Barfly");
+        System.out.println("Cars honking, people yelling, rain falling. Nothing like Los Angeles past midnight.");
+        System.out.println("Henry Chinaski stumbles into Golden arches looking to forget about life for an hour or two");
+        System.out.println("Chinaski stumbles in and knocks over someone else's drink uh oh....");
+
 
         Game:
         while (gameRunning) {
@@ -31,10 +35,10 @@ public class Barfly {
 
             int badGuyHealth = random.nextInt(maxBadGuyHealth);
             String badGuy = badGuys[random.nextInt(badGuys.length)];
-            System.out.println("\t " + badGuy + " is starting to post up! \n");
+            System.out.println("\t" + badGuy + " tells you to go out to the back and is starting to post up! \n");
 
             while (badGuyHealth > 0) {
-                System.out.println("\t Your HP: " + health);
+                System.out.println("\tYour HP: " + health);
                 System.out.println("\t" + badGuy + "'s HP: " + badGuyHealth);
                 System.out.println("\n\tWhat will you do?");
                 System.out.println("\t1. Attack");
@@ -52,8 +56,10 @@ public class Barfly {
                     System.out.println("\t> Good strike! " + badGuy + " took " + damageDealt + " damage.");
                     System.out.println("\t> ah man look at that eye- you received " + damageTaken + " damage for wanting to fight Chinaski!");
 
-                    if (health <= 0) {
-                        System.out.println("\t You got beat up tonight, go sleep it off pal...");
+                    if (health < 1) {
+                        System.out.println("---------------------------------------------------------------------------------------");
+                        System.out.println("\tYou're done for tonight, you are not looking so hot");
+                        System.out.println("\tYou took a beating tonight, go sleep it off pal...");
                         break;
                     }
 
@@ -70,6 +76,7 @@ public class Barfly {
 
                 } else if (input.equals("3")) {
                     System.out.println("\tYou ran away from " + badGuy + "!");
+                    System.out.println("\tBAD LUCK CHINASKI! \n\tAs you started to run out you bumped into another patron ");
                     continue Game;
                 } else {
                     System.out.println("\tInvalid Command");
@@ -78,7 +85,8 @@ public class Barfly {
 
 
             if (health < 1) {
-                System.out.println("You stay lying on asphalt of covered in blood while everyone is hollering as they walk back inside, you slowly start to get up to walk home for the night...");
+                System.out.println("\tYou are lying on the asphalt covered in blood while everyone is hollering as they \n\twalk back inside, you slowly start to get up to walk home for the night...");
+                break;
             }
             System.out.println("-------------------------------------------------------------------------------------------------");
             System.out.println("Good fighting Chinaski " + badGuy + " is not getting up after that one");
@@ -102,8 +110,7 @@ public class Barfly {
 
             if (input.equals("1")) {
                 System.out.println("You continue to sit, enjoying your night");
-            }
-            else if (input.equals("2")) {
+            } else if (input.equals("2")) {
                 System.out.println("You stand up and walk out without paying your tab and walk into the night");
                 break;
             }
